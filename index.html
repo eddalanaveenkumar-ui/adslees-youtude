@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone - Watch Videos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container hidden">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search YouTube...">
+            <button id="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+            <button id="close-search">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-tabs">
+        <div class="tabs-container">
+            <button class="tab active" data-category="mostPopular">For You</button>
+            <button class="tab" data-category="music">Music</button>
+            <button class="tab" data-category="gaming">Gaming</button>
+            <button class="tab" data-category="news">News</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="videos-container" id="videos-container">
+            <!-- Videos load here -->
+        </div>
+
+        <!-- Video Player Modal -->
+        <div class="video-modal hidden">
+            <div class="modal-header">
+                <button id="close-modal">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <h3>Now Playing</h3>
+            </div>
+            <div class="modal-content">
+                <div class="video-player" id="video-player">
+                    <!-- Player loads here -->
+                </div>
+                <div class="video-details">
+                    <h2 id="video-title">Video Title</h2>
+                    <div class="video-stats">
+                        <span id="video-views">0 views</span>
+                        <span id="video-date">Just now</span>
+                        <span id="video-likes">0 likes</span>
+                    </div>
+                    <div class="channel-info">
+                        <div class="channel-avatar">C</div>
+                        <div class="channel-details">
+                            <h4 id="channel-title">Channel Name</h4>
+                            <p id="subscriber-count">0 subscribers</p>
+                        </div>
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
+                    <div class="video-description">
+                        <p id="description-text">Description will appear here.</p>
+                    </div>
+                    <div class="video-actions">
+                        <button class="action-btn" id="like-btn">
+                            <i class="far fa-thumbs-up"></i>
+                            <span>Like</span>
+                        </button>
+                        <button class="action-btn" id="dislike-btn">
+                            <i class="far fa-thumbs-down"></i>
+                            <span>Dislike</span>
+                        </button>
+                        <button class="action-btn" id="share-btn">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                        <button class="action-btn" id="save-btn">
+                            <i class="far fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active" id="nav-home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-explore">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-library">
+            <i class="fas fa-play-circle"></i>
+            <span>Library</span>
+        </a>
+    </nav>
+
+    <!-- Loading -->
+    <div class="loading-overlay hidden" id="loading-overlay">
+        <div class="spinner">
+            <i class="fas fa-spinner fa-spin fa-3x"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
